@@ -1,14 +1,11 @@
 version: "2.0"
-
 stories:
-
 - story: happy path
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
-
 - story: sad path 1
   steps:
   - intent: greet
@@ -18,7 +15,6 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
-
 - story: sad path 2
   steps:
   - intent: greet
@@ -28,17 +24,36 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-
 - story: information_3
   steps:
   - intent: greet
   - action: utter_greet
-  - action: utter_my_name
-  - intent: my_name
-    entities:
-    - name: "Rahul"
-  - slot_was_set:
-    - name: "Rahul"
-  - action: utter_thanks
+  - intent: tell
+  - action: utter_tell
   - intent: ask_information
   - action: utter_ask_information
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_thankyou
+  - intent: salary
+  - action: utter_salary
+- story: salary Story
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tell
+  - action: utter_tell
+  - intent: salary
+  - action: utter_salary
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_thankyou
+  - intent: ask_information
+  - action: utter_ask_information
+- story: deadline Story
+  steps:
+  - intent: deadline
+  - action: utter_deadline
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_thankyou

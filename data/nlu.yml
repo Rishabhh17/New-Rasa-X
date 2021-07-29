@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,9 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hi
+    - Good Morning
+    - Hello
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +31,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +39,6 @@ nlu:
     - of course
     - that sounds good
     - correct
-
 - intent: deny
   examples: |
     - no
@@ -49,7 +48,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +64,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,20 +80,129 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: ask_information
+  examples:
+  - text: |
+      Can you direct me to benefits information?
+  - text: |
+      What are the benefits?
+  - text: |
+      What does BASF offer to employees?		
+  - text: |
+      Do you offer life insurance?	
+  - text: |
+      does BASF take care of its employees
+  - text: |
+      What does BASF offer to employees?
+  - text: |
+      Do you offer life insurance?
+  - text: |
+      can you direct me to the benifits
+  - text: |
+      Rental reimbursement
+  - text: |
+      Do you offer cell phone reimbursement?		
+  - text: |
+      Do you offer gym membership reimbursement?			
+  - text: |
+      Do you offer long-term disability?	
+  - text: |
+      Do you have dental insurance?	
+  - text: |
+      Do you have vision insurance?	
+  - text: |
+      Do you offer short-term disability?		
+  - text: |
+      What discounts are available to employees?			
+  - text: |
+      Does the company offer subsidized child care?			
+  - text: |
+      Is there childcare on site?	
+  - text: |
+      Will I have a good work/life balance at your company				
+  - text: |
+      Are relocation benefits offered?	
+  - text: |
+      Do you offer tuition reimbursement?		
+  - text: |
+      When do my benefits start?	
+  - text: |
+      Am I eligible for paternity leave?	
+  - text: |
+      What paternity benefits are offered?		
+  - text: |
+      Am I eligible for maternity leave?
+  - text: |
+      What health insurance benefits do you provide?
+  - text: |
+      Who is your health insurance provider?
+  - text: |
+      What amenities does the office provide?
+- intent: tell
   examples: |
-    - Can you direct me to benefits information?
-    - What are the benefits?
-
-- intent: my_name
-  examples: |
-    - My name is [Rishabh]{"entity":"name","value":"Rishabh"}
-    - My name is [Rahul]{"entity":"name","value":"Rahul"}
+    - I want to know something about BASF
+    - i want to know something
+- intent: salary
+  examples:
+  - text: |
+      How much salary i will get	
+  - text: |
+      What is the starting pay?	
+  - text: |
+      What is average pay for maintenance?			
+  - text: |
+      What may be basic salary at BASF		
+  - text: |
+      What is the proposed salary ?	
+  - text: |
+      What is average pay for maintenance?
+  - text: |
+      Do i get paid for Training ?
+  - text: |
+      What is the proposed salary ?
+  - text: |
+      what is the basic pay
+  - text: |
+      how much salary will i get
+  - text: |
+      what is starting salary of process engineer at BASF?
+  - text: |
+      What may be basic salary at BASF
+  - text: |
+      How much do chemical engineers get paid?
+  - text: |
+      Salary master thesis
+  - text: |
+      What is the expected compensation
+  - text: |
+      How much you pay for graduate trainees?
+  - text: |
+      Where can I find out about salaries?
+  - text: |
+      Can I negotiate salary?
+  - text: |
+      Is it possible to negotiate salary as an intern
+  - text: |
+      How much do you pay?
+  - text: |
+      How high is the salary
+  - text: |
+      What's the salary for fresh engineering graduates
+  - text: |
+      What is the salary for the instrument technician job?
+- intent: deadline
+  examples:
+  - text: |
+      Do you have a closing application deadline for advertised jobs?				
+  - text: |
+      when is the deadline for a job position		
+  - text: |
+      where can I find job application deadlines?		
+  - text: |
+      how many months previously apply?		

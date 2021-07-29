@@ -1,61 +1,60 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-  - ask_information
-  - my_name:
-     use_entities:
-       - name
-
-entities:
-  - name
-
-slots:
-  name:
-    type: text
-
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
-  utter_ask_information:
-  - text: "Basf offers you a unique package.The additional benefits include a company pension scheme,
-             health care and favorable conditions for life and accident insurance, among others."
-
-  utter_my_name:
-  - text: "What is your name?"
-
-  utter_thanks:
-  - text: "Thank you , sir.What do you want to know about BASF ?"
-
-
-
-
-
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_information:
+    use_entities: true
+- tell:
+    use_entities: true
+- salary:
+    use_entities: true
+- deadline:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: |-
+      Welcome to BASF ,                                                                                                                                                                                                                                                                                                                      
+      How may I help you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_information:
+  - text: 'BASF offers you a unique package, which we call you@BASF. As well as offering you a competitive salary and attractive additional benefits, we support you in finding the right balance between your career and your private life. The additional benefits include a company pension scheme, health care and favorable conditions for life and accident insurance, among others. You will also have many opportunities to develop your personal and professional knowledge. In our secure and reliable working environment, you will be given everything you need in order to do your job well. For more information, see: https://www.basf.com/global/en/careers/why-join-basf/what-you-will-get.html'
+  utter_thanks:
+  - text: Thank you ! Please visit again.
+  utter_tell:
+  - text: So ,Tell me what you want to know ?
+  utter_salary:
+  - text: We value the performance of our employees and reward them with competitive compensation that we determine on the basis of the market, the employee’s function and their performance. Detailed questions on a specific vacancy, particularly with regard to working times, compensation, contractual matters or social benefits, can generally only be answered in a personal meeting with the specialist division or the responsible human resources department.
+  utter_deadline:
+  - text: All positions advertised on our career pages are current. The job postings are only removed once the positions have been filled. The application deadlines vary for the individual positions. You can apply to a job posting as long as it is advertised under https://www.basf.com/global/en/careers/jobs.html
+actions: []
+forms: {}
+e2e_actions: []
