@@ -28,32 +28,29 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: tell
-  - action: utter_tell
   - intent: ask_information
   - action: utter_ask_information
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_thankyou
   - intent: salary
   - action: utter_salary
-- story: salary Story
+  - intent: deadline
+  - action: utter_deadline
+- story: Salary Story
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: tell
-  - action: utter_tell
   - intent: salary
   - action: utter_salary
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_thankyou
+  - intent: deadline
+  - action: utter_deadline
   - intent: ask_information
   - action: utter_ask_information
 - story: deadline Story
   steps:
+  - intent: greet
+  - action: utter_greet
   - intent: deadline
   - action: utter_deadline
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_thankyou
+  - intent: salary
+  - action: utter_salary
+  - intent: ask_information
+  - action: utter_ask_information
